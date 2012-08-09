@@ -16,8 +16,14 @@ object TestProblem4 extends Specification {
     "80295は回文数ではない" in {
       Problem4.isPalindromicNumber(80295) must_==false
     }
-    "2桁の数の積である回文数の最大値は9009である" in {
-      Problem4.calcProductDigitPalindromicNumber(2) must_==9009
+    "4桁の最大数は9999である" in {
+      Problem4.numMaxDigit(4) must_==9999
+    }
+    "2桁の数の積で表される回文数のうち、最大のものは9009である" in {
+      Problem4.calcMaxProductPalindrome(Problem4.numMaxDigit(2)) must_==9009
+    }
+    "3桁の数の積で表される回文数のうち、最大のものはhogeである" in {
+      Problem4.calcMaxProductPalindrome(Problem4.numMaxDigit(3)) must_==906609
     }
   }
 }
